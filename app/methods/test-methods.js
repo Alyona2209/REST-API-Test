@@ -1,4 +1,4 @@
-export const TEST_METHODS = [
+const TEST_METHOD = [
     {
         request: {
             "url": "https://postman-echo.com/get",
