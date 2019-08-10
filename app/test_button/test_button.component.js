@@ -8,22 +8,23 @@ angular.module('testButton', [])
     let self = this;
     self.tests = TEST_METHODS;
     self.results = [];
+    self.awaitingResponses = new Map();
     self.makeTest = () => {
       for (let test of self.tests) {
-        let awaitingResponse = test.responseStatus;
+         self.awaitingResponses.set(test.request.method, test.responseStatus);
         $http(test.request)
             .then(response => {
               self.results.push({
                 requestMethod: test.request.method,
                 responseDone: response,
-                result: response.statusCode === awaitingResponse
+                result: response.status.toString() === self.awaitingResponses.get(test.request.method)
               });
             })
             .catch(err => {
               self.results.push({
                 requestMethod: test.request.method,
                 responseDone: err,
-                result: false
+                result: err.status.toString() === self.awaitingResponses.get(test.request.method)
               });
             });
       }
@@ -34,13 +35,13 @@ angular.module('testButton', [])
 const TEST_METHODS = [
   {
     request: {
-      "url": "https://postman-echo.com/get",
-      "method": "GET",
       "async": true,
       "crossDomain": true,
+      "url": "https://c6df5944-03c1-4e1c-8022-fb723e3997fe.mock.pstmn.io/get",
+      "method": "GET",
       "headers": {
         "cache-control": "no-cache",
-        "Postman-Token": "f0959f3d-1c89-466b-8919-fd676ac41ee2"
+        "Postman-Token": "6520f194-890c-4f02-b88d-467bc6302d38"
       }
     },
     responseStatus: '200'
@@ -49,7 +50,7 @@ const TEST_METHODS = [
     request: {
       "async": true,
       "crossDomain": true,
-      "url": "https://postman-echo.com/post",
+      "url": "https://c6df5944-03c1-4e1c-8022-fb723e3997fe.mock.pstmn.io/post",
       "method": "POST",
       "headers": {
         "User-Agent": "PostmanRuntime/7.15.2",
@@ -70,7 +71,7 @@ const TEST_METHODS = [
     request: {
       "async": true,
       "crossDomain": true,
-      "url": "https://postman-echo.com/put",
+      "url": "https://c6df5944-03c1-4e1c-8022-fb723e3997fe.mock.pstmn.io/put",
       "method": "PUT",
       "headers": {
         "User-Agent": "PostmanRuntime/7.15.2",
@@ -91,7 +92,7 @@ const TEST_METHODS = [
     request: {
       "async": true,
       "crossDomain": true,
-      "url": "https://postman-echo.com/patch",
+      "url": "https://c6df5944-03c1-4e1c-8022-fb723e3997fe.mock.pstmn.io/patch",
       "method": "PATCH",
       "headers": {
         "User-Agent": "PostmanRuntime/7.15.2",
@@ -106,13 +107,13 @@ const TEST_METHODS = [
         "cache-control": "no-cache"
       }
     },
-    responseStatus: '200'
+    responseStatus: '404'
   },
   {
     request: {
       "async": true,
       "crossDomain": true,
-      "url": "https://postman-echo.com/delete",
+      "url": "https://c6df5944-03c1-4e1c-8022-fb723e3997fe.mock.pstmn.io/delete",
       "method": "DELETE",
       "headers": {
         "User-Agent": "PostmanRuntime/7.15.2",
