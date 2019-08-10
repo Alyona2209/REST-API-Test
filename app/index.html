@@ -12,7 +12,9 @@
 </head>
 <body>
 
-  <div ng-view></div>
+  <div id="container">
+    <test-button></test-button>
+  </div>
 
 
   <!-- In production use:
@@ -22,9 +24,6 @@
   <script src="lib/angular-route/angular-route.js"></script>
   <script src="app.js"></script>
   <script src="test_button/test_button.component.js"></script>
-  <script src="view2/view2.js"></script>
-  <script src="core/version/version.js"></script>
-  <script src="core/version/version-directive.js"></script>
-  <script src="core/version/interpolate-filter.js"></script>
+  <script src="methods/test-methods.js"></script>
 </body>
 </html>

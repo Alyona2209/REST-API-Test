@@ -1,4 +1,4 @@
-let TEST_METHODS = [
+export const TEST_METHODS = [
     {
         request: {
             "url": "https://postman-echo.com/get",
@@ -10,7 +10,7 @@ let TEST_METHODS = [
                 "Postman-Token": "f0959f3d-1c89-466b-8919-fd676ac41ee2"
             }
         },
-        response: '200'
+        responseStatus: '200'
     },
     {
         request: {
@@ -31,7 +31,7 @@ let TEST_METHODS = [
                 "cache-control": "no-cache"
             }
         },
-        response: '200'
+        responseStatus: '200'
     },
     {
         request: {
@@ -52,7 +52,7 @@ let TEST_METHODS = [
                 "cache-control": "no-cache"
             }
         },
-        response: '200'
+        responseStatus: '200'
     },
     {
         request: {
@@ -73,7 +73,7 @@ let TEST_METHODS = [
                 "cache-control": "no-cache"
             }
         },
-        response: '200'
+        responseStatus: '200'
     },
     {
         request: {
@@ -94,6 +94,6 @@ let TEST_METHODS = [
                 "cache-control": "no-cache"
             }
         },
-        response: '200'
+        responseStatus: '200'
     }
-]
+];
