@@ -4,6 +4,6 @@
   <li class="result_item" ng-repeat="result in $ctrl.results">
       <div class="result_item-name">{{result.requestMethod}}</div>
       <div class="result_item-text">{{result.responseDone}}</div>
-      <div class="result_item-result">{{result.result}}</div>
+      <div ng-class="result.result ? 'true' : 'false'" class="result_item-result">{{result.result}}</div>
   </li>
 </ul>

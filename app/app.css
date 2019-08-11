@@ -52,4 +52,12 @@ test-button {
   margin: 15px auto 15px 20px;
 }
 
+.true {
+  color: #157b3d;
+}
+
+.false {
+  color: #7b0002;
+}
+
 /*# sourceMappingURL=app.css.map */
