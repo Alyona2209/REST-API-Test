@@ -40,8 +40,8 @@ test-button {
 }
 
 .result_item-text {
-  width: 40%;
-  height: 70px;
+  width: 50%;
+  height: 90px;
   overflow-y: scroll;
   margin: 15px auto;
   padding: 10px;
