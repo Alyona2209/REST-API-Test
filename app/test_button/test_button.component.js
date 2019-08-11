@@ -11,7 +11,7 @@ angular.module('testButton', [])
     self.awaitingResponses = new Map();
     self.makeTest = () => {
       for (let test of self.tests) {
-         self.awaitingResponses.set(test.request.method, test.responseStatus);
+        self.awaitingResponses.set(test.request.method, test.responseStatus);
         $http(test.request)
             .then(response => {
               self.results.push({

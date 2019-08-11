@@ -1,9 +1,9 @@
-<button ng-click="$ctrl.makeTest()">Make a test</button>
+<button class="test_button-el" ng-click="$ctrl.makeTest()">Make a test</button>
 
-<ul>
-  <li ng-repeat="result in $ctrl.results">
-      <span>{{result.requestMethod}}</span>
-      <p>{{result.responseDone}}</p>
-      <p>{{result.result}}</p>
+<ul class="result">
+  <li class="result_item" ng-repeat="result in $ctrl.results">
+      <div class="result_item-name">{{result.requestMethod}}</div>
+      <div class="result_item-text">{{result.responseDone}}</div>
+      <div class="result_item-result">{{result.result}}</div>
   </li>
 </ul>
