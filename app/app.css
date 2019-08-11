@@ -35,20 +35,21 @@ test-button {
   text-align: center;
   color: #11306f;
   width: 100px;
-  margin: 15px auto 15px 150px;
+  margin: 15px 20px 15px auto;
   padding: 10px;
 }
 
 .result_item-text {
   width: 50%;
+  max-width: 600px;
   height: 90px;
   overflow-y: scroll;
-  margin: 15px auto;
+  margin: 15px 10px;
   padding: 10px;
 }
 
 .result_item-result {
-  margin: 15px 150px 15px auto;
+  margin: 15px auto 15px 20px;
 }
 
 /*# sourceMappingURL=app.css.map */
