@@ -7,16 +7,18 @@ angular.module('testButton', [])
   controller: function testButtonController($http) {
     let self = this;
     self.tests = TEST_METHODS;
-    self.results = [];
     self.awaitingResponses = new Map();
+
     self.makeTest = () => {
+      self.results = [];
+
       for (let test of self.tests) {
         self.awaitingResponses.set(test.request.method, test.responseStatus);
         $http(test.request)
             .then(response => {
               self.results.push({
                 requestMethod: test.request.method,
-                responseDone: response,
+                responseDone: response.data,
                 result: response.status.toString() === self.awaitingResponses.get(test.request.method)
               });
             })
