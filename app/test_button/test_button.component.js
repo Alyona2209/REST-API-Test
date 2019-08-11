@@ -39,7 +39,7 @@ const TEST_METHODS = [
     request: {
       "async": true,
       "crossDomain": true,
-      "url": "https://c6df5944-03c1-4e1c-8022-fb723e3997fe.mock.pstmn.io/get",
+      "url": "https://8b871866-25fa-4c9d-8211-9492fc0e772f.mock.pstmn.io/get",
       "method": "GET",
       "headers": {
         "cache-control": "no-cache",
@@ -52,7 +52,7 @@ const TEST_METHODS = [
     request: {
       "async": true,
       "crossDomain": true,
-      "url": "https://c6df5944-03c1-4e1c-8022-fb723e3997fe.mock.pstmn.io/post",
+      "url": "https://8b871866-25fa-4c9d-8211-9492fc0e772f.mock.pstmn.io/post",
       "method": "POST",
       "headers": {
         "User-Agent": "PostmanRuntime/7.15.2",
@@ -73,7 +73,7 @@ const TEST_METHODS = [
     request: {
       "async": true,
       "crossDomain": true,
-      "url": "https://c6df5944-03c1-4e1c-8022-fb723e3997fe.mock.pstmn.io/put",
+      "url": "https://8b871866-25fa-4c9d-8211-9492fc0e772f.mock.pstmn.io/put",
       "method": "PUT",
       "headers": {
         "User-Agent": "PostmanRuntime/7.15.2",
@@ -94,7 +94,7 @@ const TEST_METHODS = [
     request: {
       "async": true,
       "crossDomain": true,
-      "url": "https://c6df5944-03c1-4e1c-8022-fb723e3997fe.mock.pstmn.io/patch",
+      "url": "https://8b871866-25fa-4c9d-8211-9492fc0e772f.mock.pstmn.io/patch",
       "method": "PATCH",
       "headers": {
         "User-Agent": "PostmanRuntime/7.15.2",
@@ -109,13 +109,13 @@ const TEST_METHODS = [
         "cache-control": "no-cache"
       }
     },
-    responseStatus: '404'
+    responseStatus: '200'
   },
   {
     request: {
       "async": true,
       "crossDomain": true,
-      "url": "https://c6df5944-03c1-4e1c-8022-fb723e3997fe.mock.pstmn.io/delete",
+      "url": "https://8b871866-25fa-4c9d-8211-9492fc0e772f.mock.pstmn.io/delete",
       "method": "DELETE",
       "headers": {
         "User-Agent": "PostmanRuntime/7.15.2",
